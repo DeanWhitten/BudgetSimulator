@@ -1,32 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import reportWebVitals from "./reportWebVitals";
-import Expenses from "./Components/Expenses";
+import reportWebVitals from "./reportWebVitals"
 import Income from "./Components/Income";
-import { Col, Row,Statistic } from "antd";
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <div>
-    <Row>
-      <Col span={20}>
-        <h1 style={{ paddingLeft: "100px", position: "sticky" }}>
-          Budget Simulator
-        </h1>
-      </Col>
-     <Col style={{paddingLeft:'21px', textAlign:'right'}}><Statistic title="Leftover" value={112893}></Statistic></Col> 
-    </Row>
-
-    <Row style={{ paddingLeft: "100px" }}>
-      <Col span={12}>
-        <Income />
-      </Col>
-      <Col span={12}>
-        <Expenses />
-      </Col>
-    </Row>
+<Income/>
   </div>
 );
 
