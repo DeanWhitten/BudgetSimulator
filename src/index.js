@@ -4,36 +4,29 @@ import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import Expenses from "./Components/Expenses";
 import Income from "./Components/Income";
-import { Card } from "antd";
+import { Col, Row,Statistic } from "antd";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
-const gridStyle = {
-  width: '50%',
-  textAlign: 'center',
-};
-
 root.render(
-  <div
-    style={{
-      display: "flex",
-    }}
-  >
-    <Card
-      title=<h1>Budget Simulator </h1>
-      style={{
-        display: "flex",
-        alignItems: "center",
-        width: "100vw",
-      }}
-    >
-      <Card.Grid style={gridStyle}>
+  <div>
+    <Row>
+      <Col span={20}>
+        <h1 style={{ paddingLeft: "100px", position: "sticky" }}>
+          Budget Simulator
+        </h1>
+      </Col>
+     <Col style={{paddingLeft:'21px', textAlign:'right'}}><Statistic title="Leftover" value={112893}></Statistic></Col> 
+    </Row>
+
+    <Row style={{ paddingLeft: "100px" }}>
+      <Col span={12}>
         <Income />
-      </Card.Grid>
-      <Card.Grid style={gridStyle}>
+      </Col>
+      <Col span={12}>
         <Expenses />
-      </Card.Grid>
-    </Card>
+      </Col>
+    </Row>
   </div>
 );
 
